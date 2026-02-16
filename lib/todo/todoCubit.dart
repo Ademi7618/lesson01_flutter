@@ -11,7 +11,8 @@ class TodoCubit extends Cubit<TodoState> {
       description: description,
     );
 
-    final updatedList = List<TodoModel>.from(state.todos)..add(newTodo);
+    final updatedList = List<TodoModel>.from(state.todos)
+      ..add(newTodo);
 
     emit(state.copyWith(todos: updatedList));
   }

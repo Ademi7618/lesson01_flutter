@@ -1,16 +1,13 @@
-import 'package:lesson01_flutter/todo/todoModel.dart';
 import 'package:equatable/equatable.dart';
-
+import 'package:lesson01_flutter/todo/todoModel.dart';
 
 class TodoState extends Equatable {
   final List<TodoModel> todos;
-
   const TodoState({required this.todos});
 
   factory TodoState.initial() {
     return const TodoState(todos: []);
   }
-
   TodoState copyWith({
     List<TodoModel>? todos,
   }) {
@@ -18,7 +15,6 @@ class TodoState extends Equatable {
       todos: todos ?? this.todos,
     );
   }
-
   @override
   List<Object?> get props => [todos];
 }
